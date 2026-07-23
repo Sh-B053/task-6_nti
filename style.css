@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero-section {
+  background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+  color: white;
+  padding: 100px 0 80px;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+header {
+  background: #000;
+  padding: 20px 50px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #f5af19;
+}
+
+footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+  font-size: 20px;
+}
+.hero-section h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.hero-section h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+.stats-section {
+  background: white;
+  padding: 40px 0 60px;
+  margin-top: -30px;
+  position: relative;
+  z-index: 2;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 15px;
+}
+
+.stat-number {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #f12711;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.stat-label.small-text {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.destinations-section {
+  padding: 60px 0 40px;
+  background: #f8f9fa;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.section-title p {
+  color: #888;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.destination-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  text-align: center;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.destination-card h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.destination-card .price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f12711;
+  margin-bottom: 5px;
+}
+
+.destination-card .days {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.destination-card .days i {
+  color: #f12711;
+  margin-right: 5px;
+}
+
+.testimonials-section {
+  padding: 60px 0;
+  background: white;
+}
+
+.testimonial-card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border-left: 4px solid #f12711;
+}
+
+.testimonial-card h5 {
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.testimonial-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.testimonial-card .days {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.testimonial-card .days i {
+  color: #f12711;
+  margin-right: 5px;
+}
+
+footer {
+  background: #1a1a2e;
+  color: #ccc;
+  padding: 50px 0 20px;
+}
+
+footer h5 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+footer ul li:hover {
+  color: #f5af19;
+}
+
+footer .footer-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+  display: block;
+}
+
+footer .contact-info {
+  margin-bottom: 8px;
+}
+
+footer .contact-info i {
+  width: 25px;
+  color: #f5af19;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.footer-bottom span {
+  color: #f5af19;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #f5af19, #f12711);
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.8rem;
+  }
+  .hero-section {
+    padding: 60px 0 50px;
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  }
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  .section-title h2 {
+    font-size: 2rem;
+  }
+}
