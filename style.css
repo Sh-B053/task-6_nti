@@ -3,6 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .hero-section {
   background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
   color: white;
@@ -20,6 +31,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .logo {
@@ -30,6 +42,7 @@ header .container {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -53,14 +66,15 @@ footer {
   font-size: 20px;
 }
 .hero-section h1 {
-  font-size: 4rem;
+  font-size: clamp(2.2rem, 7vw, 4rem);
   font-weight: 700;
   margin-bottom: 10px;
   letter-spacing: 2px;
+  overflow-wrap: break-word;
 }
 
 .hero-section h2 {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 3.5vw, 1.8rem);
   font-weight: 300;
   margin-bottom: 20px;
 }
@@ -68,6 +82,7 @@ footer {
 .hero-section p {
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 15px;
   font-size: 1.1rem;
   line-height: 1.8;
   opacity: 0.95;
@@ -239,6 +254,7 @@ footer .footer-brand {
 
 footer .contact-info {
   margin-bottom: 8px;
+  overflow-wrap: anywhere;
 }
 
 footer .contact-info i {
@@ -261,21 +277,132 @@ footer .contact-info i {
 
 .text-gradient {
   background: linear-gradient(135deg, #f5af19, #f12711);
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-@media (max-width: 768px) {
-  .hero-section h1 {
-    font-size: 2.8rem;
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+/* ---------- Tablets ---------- */
+@media (max-width: 992px) {
+  header {
+    padding: 20px 30px;
   }
+  nav {
+    gap: 20px;
+  }
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ---------- Large phones / small tablets ---------- */
+@media (max-width: 768px) {
+  /* Header: logo on top, nav below */
+  header {
+    padding: 15px 20px;
+  }
+  header .container {
+    flex-direction: column;
+    gap: 12px;
+  }
+  nav {
+    justify-content: center;
+    gap: 10px 22px;
+  }
+  nav a {
+    font-size: 16px;
+  }
+
   .hero-section {
     padding: 60px 0 50px;
     clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
   }
+  .hero-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .stats-section {
+    padding: 30px 0 40px;
+  }
   .stat-number {
     font-size: 2.2rem;
   }
+
+  .destinations-section {
+    padding: 40px 0 20px;
+  }
+  .testimonials-section {
+    padding: 40px 0;
+  }
   .section-title h2 {
     font-size: 2rem;
+  }
+  .section-title p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+
+  /* Footer: centered stacked columns */
+  footer {
+    padding: 40px 0 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+  footer .contact-info i {
+    width: auto;
+    margin-right: 8px;
+  }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 480px) {
+  header {
+    padding: 12px 15px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  nav {
+    gap: 8px 16px;
+  }
+  nav a {
+    font-size: 15px;
+  }
+
+  .hero-section {
+    padding: 45px 0 40px;
+  }
+  .hero-section h1 {
+    letter-spacing: 1px;
+  }
+
+  .stat-number {
+    font-size: 1.9rem;
+  }
+  .stat-item {
+    padding: 10px;
+  }
+
+  .section-title h2 {
+    font-size: 1.7rem;
+  }
+
+  .destination-card,
+  .testimonial-card {
+    padding: 20px 15px;
+  }
+}
+
+/* Touch devices: skip hover lift that sticks after a tap */
+@media (hover: none) {
+  .destination-card:hover {
+    transform: none;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
   }
 }
